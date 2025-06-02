@@ -273,7 +273,7 @@ export default function Portfolio() {
             <ProjectCard
               title="Ford's Gym App"
               description="A mobile fitness companion for workout tracking, class booking, and membership management."
-              tags={["Flutter", "Firebase", "Dart", "UI/UX Design"]}
+              tags={["Flutter", "Firebase", "Dart", "Figma"]}
               image="/fordsgym-cover.png"
               demoUrl="https://example.com"
               repoUrl="https://github.com/yourusername/fordsgym-app"
@@ -293,44 +293,49 @@ export default function Portfolio() {
               ]}
               technologies={[
                 "Flutter",
-                "Firebase Firestore",
-                "Firebase Authentication",
+                "Firebase",
                 "Dart",
-                "Figma (UI Design)",
+                "Figma",
               ]}
               challenges="Designing a user-friendly interface that works across different screen sizes while ensuring smooth data flow and synchronization using Firebase services presented a challenge. Responsive UI design and structured Firestore data models were crucial to the app's success."
               outcome="The app improved member engagement at Ford's Gym, reducing missed classes by 40% and streamlining staff operations with automated scheduling and notifications."
             />
 
             <ProjectCard
-              title="AI Content Generator"
-              description="An AI-powered content generation tool using OpenAI's GPT models."
-              tags={["Next.js", "OpenAI API", "Node.js", "MongoDB"]}
-              image="/placeholder.svg?height=400&width=600"
+              title="PLM Mobile v.2 App"
+              description="A mobile application for students to access academic records, schedules, and campus updates."
+              tags={["Flutter", "Firebase", "UI/UX Design"]}
+              image="/plm-mobilev2-cover.png"
               demoUrl="https://example.com"
-              repoUrl="https://github.com"
-              longDescription="An innovative content generation platform that leverages OpenAI's GPT models to help users create high-quality articles, marketing copy, and social media posts with minimal input."
+              repoUrl="https://github.com/yourusername/plm-mobile-v2"
+              longDescription="PLM Mobile v.2 is an upgraded mobile application developed for students of Pamantasan ng Lungsod ng Maynila, offering seamless access to grades, class schedules, academic calendar, and official campus announcements. Designed with a modern UI and improved performance, the app enhances student engagement and experience on mobile platforms."
               gallery={[
-                "/placeholder.svg?height=400&width=600",
-                "/placeholder.svg?height=400&width=600",
-                "/placeholder.svg?height=400&width=600",
+                "/plm-mobilev2-screen1.png",
+                "/plm-mobilev2-screen2.png",
+                "/plm-mobilev2-screen3.png",
               ]}
               features={[
-                "AI-powered content generation",
-                "Multiple content formats (articles, social posts, emails)",
-                "Content editing and refinement tools",
-                "SEO optimization suggestions",
-                "Content history and management",
-                "Export to various formats",
+                "Student login and profile management",
+                "Student enrollment process",
+                "View grades, class schedules, and rooms located",
+                "Real-time announcements and notifications",
+                "Dark mode and responsive mobile layout",
+                "Integration with PLM-ICTO APIs for live data",
               ]}
-              technologies={["Next.js", "OpenAI API", "Node.js", "MongoDB", "Express", "JWT Authentication"]}
-              challenges="Balancing API costs with user experience was a significant challenge. We implemented intelligent caching and request optimization to reduce API calls while maintaining quality output."
-              outcome="The tool has helped content creators reduce content production time by up to 60% while maintaining high-quality standards."
+              technologies={[
+                "Flutter",
+                "Firebase",
+                "REST API",
+                "Dart",
+                "Figma",
+              ]}
+              challenges="Coordinating with backend API changes and ensuring data consistency across sessions posed challenges. We addressed this through efficient state management and error handling strategies in Flutter."
+              outcome="The app significantly improved student access to university services and reduced inquiries to the registrar's office."
             />
             <ProjectCard
-              title="Fitness Tracker"
-              description="A mobile-first fitness tracking application with data visualization."
-              tags={["React Native", "TypeScript", "D3.js", "Firebase"]}
+              title="GDSC PLM - Which Haribird R u?"
+              description="A fun game mobile application for the community-event of Google Developer Students Club."
+              tags={["Flutter", "FlutterFlow", "Firebase", "Figma"]}
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
@@ -348,7 +353,11 @@ export default function Portfolio() {
                 "Social sharing and community features",
                 "Nutrition tracking and meal planning",
               ]}
-              technologies={["React Native", "TypeScript", "D3.js", "Firebase", "Redux", "Health Kit API"]}
+              technologies={[
+                "Flutter",
+                "FlutterFlow",
+                "Firebase",
+                "Figma",]}
               challenges="Creating intuitive data visualizations that work well on mobile devices was challenging. We used D3.js with custom optimizations to ensure smooth performance across different screen sizes."
               outcome="The app has gained over 10,000 active users with a 4.7-star rating on app stores. Users particularly appreciate the intuitive interface and helpful progress visualizations."
             />
