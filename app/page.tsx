@@ -32,35 +32,43 @@ export default function Portfolio() {
           <div className="space-y-6">
             <div className="inline-block">
               <div className="relative px-3 py-1 text-sm font-medium rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4">
-                <span className="relative z-10">Software Engineer & Creative Developer</span>
+                <span className="relative z-10">Software Designer & Creative Developer</span>
                 <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 animate-pulse"></span>
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
               <span className="block">Hi, I'm</span>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                Shine Kyaw Kyaw Aung
+                Shieryl!
               </span>
             </h1>
             <p className="text-xl text-zinc-400 max-w-[600px]">
               I craft exceptional digital experiences with code, creativity, and a passion for innovation.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button className="relative overflow-hidden group bg-gradient-to-r from-purple-500 to-pink-500 border-0">
-                <span className="relative z-10 flex items-center">
-                  View Projects <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              <Button
+                className="relative overflow-hidden group bg-gradient-to-r from-purple-500 to-pink-500 border-0"
+                asChild
+              >
+                <Link href="#projects">
+                  <span className="relative z-10 flex items-center">
+                    View Projects <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                </Link>
               </Button>
               <Button
                 variant="outline"
                 className="border-zinc-700 text-zinc-300 hover:text-white hover:border-zinc-500"
+                asChild
               >
-                Contact Me
+                <Link href="#contact">
+                  Contact Me <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
             <div className="flex gap-4 pt-4">
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/shieryl-ryle" target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -70,7 +78,7 @@ export default function Portfolio() {
                   <span className="sr-only">GitHub</span>
                 </Button>
               </Link>
-              <Link href="https://www.linkedin.com/in/shinekyawkyawaung/" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.linkedin.com/in/shieryltendilla//" target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -90,7 +98,7 @@ export default function Portfolio() {
                   <span className="sr-only">Twitter</span>
                 </Button>
               </Link>
-              <Link href="mailto:hello@example.com">
+              <Link href="https://mail.google.com/tendillashieryle">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -146,31 +154,30 @@ export default function Portfolio() {
             <div className="space-y-6">
               <GlassmorphicCard>
                 <p className="text-lg text-zinc-300">
-                  I'm a passionate software engineer with experience building web applications and digital products. I
-                  specialize in frontend development with React and Next.js, but I'm also comfortable working with
-                  backend technologies.
+                  I'm a software designer and developer driven by curiosity, passion, and purpose. I enjoy turning ideas
+                  into clean, functional, and user-friendly products and I'm always looking to learn and improve along
+                  the way!
                 </p>
                 <p className="text-lg text-zinc-300 mt-4">
-                  My journey in tech started with a strong foundation in software development. I've worked with various
-                  companies to create intuitive, performant, and accessible digital experiences.
+                  My journey in tech started inside the 4 walls of Pamantasan ng Lungsod ng Maynila. I've worked with
+                  various projects to create intuitive, performant, and accessible digital experiences.
                 </p>
                 <p className="text-lg text-zinc-300 mt-4">
-                  When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                  and staying up-to-date with the latest industry trends.
+                  On top of coding, I have experience in UI/UX design and project management too ^^
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <div className="space-y-1">
                     <div className="text-sm text-zinc-500">Name</div>
-                    <div className="font-medium">Shine Kyaw Kyaw Aung</div>
+                    <div className="font-medium">Shiery Tendilla</div>
                   </div>
                   <div className="space-y-1">
                     <div className="text-sm text-zinc-500">Email</div>
-                    <div className="font-medium">hello@example.com</div>
+                    <div className="font-medium">tendillashieryle@gmail.com</div>
                   </div>
                   <div className="space-y-1">
                     <div className="text-sm text-zinc-500">Location</div>
-                    <div className="font-medium">Myanmar</div>
+                    <div className="font-medium">Manila, Philippines</div>
                   </div>
                   <div className="space-y-1">
                     <div className="text-sm text-zinc-500">Availability</div>
@@ -198,18 +205,24 @@ export default function Portfolio() {
           <SectionHeading title="My Skills" subtitle="Technologies I work with" />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16">
-            <SkillBadge name="JavaScript" level={90} />
-            <SkillBadge name="TypeScript" level={85} />
-            <SkillBadge name="React" level={95} />
-            <SkillBadge name="Next.js" level={90} />
-            <SkillBadge name="Node.js" level={80} />
-            <SkillBadge name="HTML/CSS" level={95} />
-            <SkillBadge name="Tailwind CSS" level={90} />
-            <SkillBadge name="GraphQL" level={75} />
-            <SkillBadge name="PostgreSQL" level={70} />
-            <SkillBadge name="AWS" level={65} />
-            <SkillBadge name="Docker" level={60} />
-            <SkillBadge name="Git" level={85} />
+            <SkillBadge name="Laravel" icon={<span className="text-yellow-400">🔥</span>} />
+            <SkillBadge name="JavaScript" icon={<span className="text-yellow-400">🟨</span>} />
+            <SkillBadge name="Python" icon={<span className="text-blue-500">🐍</span>} />
+            <SkillBadge name="C" icon={<span className="text-blue-500">🟦</span>} />
+            <SkillBadge name="C++" icon={<span className="text-blue-500">➕➕</span>} />
+            <SkillBadge name="Flutter" icon={<span className="text-blue-500">📱</span>} />
+            <SkillBadge name="Flutterflow" icon={<span className="text-blue-500">⚙️</span>} />
+            <SkillBadge name="React JS" icon={<span className="text-cyan-400">⚛️</span>} />
+            <SkillBadge name="Livewire" icon={<span className="text-white">▲</span>} />
+            <SkillBadge name="HTML/CSS 3" icon={<span className="text-orange-500">🌐</span>} />
+            <SkillBadge name="Tailwind CSS" icon={<span className="text-cyan-400">💨</span>} />
+            <SkillBadge name="PHP" icon={<span className="text-blue-600">🐘</span>} />
+            <SkillBadge name="MySQL" icon={<span className="text-yellow-400">🐬</span>} />
+            <SkillBadge name="AWS" icon={<span className="text-orange-400">☁️</span>} />
+            <SkillBadge name="Docker" icon={<span className="text-blue-400">🐳</span>} />
+            <SkillBadge name="Git" icon={<span className="text-orange-600">🔀</span>} />
+            <SkillBadge name="Blender" icon={<span className="text-blue-500">🟠</span>} />
+            <SkillBadge name="Figma" icon={<span className="text-blue-500">🖼️</span>} />
           </div>
         </div>
       </section>
@@ -232,6 +245,31 @@ export default function Portfolio() {
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
+              longDescription="A comprehensive e-commerce solution that provides businesses with a modern, responsive online store. Features include product management, shopping cart functionality, secure checkout with Stripe, and order management."
+              gallery={[
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+              ]}
+              features={[
+                "Responsive product catalog with filtering and search",
+                "User authentication and account management",
+                "Shopping cart with persistent storage",
+                "Secure payment processing with Stripe",
+                "Order tracking and history",
+                "Admin dashboard for inventory management",
+              ]}
+              technologies={[
+                "Next.js",
+                "TypeScript",
+                "Prisma",
+                "PostgreSQL",
+                "Stripe API",
+                "Tailwind CSS",
+                "NextAuth.js",
+              ]}
+              challenges="One of the main challenges was implementing a seamless checkout experience while ensuring security and performance. We solved this by optimizing the Stripe integration and implementing server-side rendering for critical pages."
+              outcome="The platform has successfully processed over 1,000 orders with a 99.8% uptime since launch. Customer feedback has been overwhelmingly positive, particularly regarding the intuitive interface and smooth checkout process."
             />
             <ProjectCard
               title="Task Management App"
@@ -240,6 +278,30 @@ export default function Portfolio() {
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
+              longDescription="A powerful task management application designed for teams to collaborate efficiently. The app features real-time updates, task assignment, progress tracking, and deadline management."
+              gallery={[
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+              ]}
+              features={[
+                "Real-time collaboration with Firebase",
+                "Drag-and-drop task organization",
+                "Task assignment and delegation",
+                "Progress tracking and reporting",
+                "Deadline notifications and reminders",
+                "Team chat and commenting system",
+              ]}
+              technologies={[
+                "React",
+                "Firebase Realtime Database",
+                "Firebase Authentication",
+                "Redux",
+                "Tailwind CSS",
+                "React DnD",
+              ]}
+              challenges="Implementing real-time synchronization across multiple users while maintaining performance was challenging. We utilized Firebase's efficient data structure and optimized React rendering to ensure a smooth experience."
+              outcome="The application has been adopted by several teams, resulting in a reported 30% increase in productivity and improved project completion rates."
             />
             <ProjectCard
               title="AI Content Generator"
@@ -248,6 +310,23 @@ export default function Portfolio() {
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
+              longDescription="An innovative content generation platform that leverages OpenAI's GPT models to help users create high-quality articles, marketing copy, and social media posts with minimal input."
+              gallery={[
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+              ]}
+              features={[
+                "AI-powered content generation",
+                "Multiple content formats (articles, social posts, emails)",
+                "Content editing and refinement tools",
+                "SEO optimization suggestions",
+                "Content history and management",
+                "Export to various formats",
+              ]}
+              technologies={["Next.js", "OpenAI API", "Node.js", "MongoDB", "Express", "JWT Authentication"]}
+              challenges="Balancing API costs with user experience was a significant challenge. We implemented intelligent caching and request optimization to reduce API calls while maintaining quality output."
+              outcome="The tool has helped content creators reduce content production time by up to 60% while maintaining high-quality standards."
             />
             <ProjectCard
               title="Fitness Tracker"
@@ -256,6 +335,23 @@ export default function Portfolio() {
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
+              longDescription="A comprehensive fitness tracking application that helps users monitor workouts, track progress, and visualize fitness data. The app includes workout planning, progress tracking, and personalized recommendations."
+              gallery={[
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+              ]}
+              features={[
+                "Workout tracking and planning",
+                "Progress visualization with interactive charts",
+                "Personalized workout recommendations",
+                "Integration with health devices",
+                "Social sharing and community features",
+                "Nutrition tracking and meal planning",
+              ]}
+              technologies={["React Native", "TypeScript", "D3.js", "Firebase", "Redux", "Health Kit API"]}
+              challenges="Creating intuitive data visualizations that work well on mobile devices was challenging. We used D3.js with custom optimizations to ensure smooth performance across different screen sizes."
+              outcome="The app has gained over 10,000 active users with a 4.7-star rating on app stores. Users particularly appreciate the intuitive interface and helpful progress visualizations."
             />
             <ProjectCard
               title="Weather Dashboard"
@@ -264,6 +360,23 @@ export default function Portfolio() {
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
+              longDescription="An elegant weather dashboard that provides current conditions, forecasts, and historical weather data with beautiful visualizations. The app includes location-based weather, interactive maps, and severe weather alerts."
+              gallery={[
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+              ]}
+              features={[
+                "Real-time weather conditions",
+                "7-day forecast with detailed information",
+                "Historical weather data analysis",
+                "Interactive weather maps",
+                "Severe weather alerts",
+                "Location-based weather tracking",
+              ]}
+              technologies={["React", "Weather API", "Chart.js", "Styled Components", "Mapbox", "Progressive Web App"]}
+              challenges="Handling and visualizing large amounts of weather data efficiently was a challenge. We implemented data aggregation techniques and optimized rendering to ensure smooth performance."
+              outcome="The dashboard has become a popular tool for weather enthusiasts and professionals, with users praising its accuracy and beautiful visualizations."
             />
             <ProjectCard
               title="Portfolio Website"
@@ -272,6 +385,30 @@ export default function Portfolio() {
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
+              longDescription="A modern, responsive portfolio website showcasing my projects, skills, and experience. The site features smooth animations, interactive elements, and a clean, professional design."
+              gallery={[
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+                "/placeholder.svg?height=400&width=600",
+              ]}
+              features={[
+                "Responsive design for all devices",
+                "Smooth page transitions and animations",
+                "Interactive project showcases",
+                "Dark mode support",
+                "Contact form with validation",
+                "Performance optimized loading",
+              ]}
+              technologies={[
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "Framer Motion",
+                "React Hooks",
+                "Vercel Deployment",
+              ]}
+              challenges="Creating smooth animations while maintaining performance was challenging. Framer Motion helped solve this by providing efficient animation capabilities that work well with React's rendering cycle."
+              outcome="The portfolio has effectively showcased my work and skills, leading to new opportunities and collaborations with clients and other developers."
             />
           </div>
         </div>
