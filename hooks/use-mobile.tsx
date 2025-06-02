@@ -22,3 +22,6 @@ export function useMobile() {
 
   return isMobile
 }
+
+// Add default export
+export default useMobile
