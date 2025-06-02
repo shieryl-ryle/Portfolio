@@ -239,70 +239,69 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
             <ProjectCard
-              title="E-commerce Platform"
-              description="A full-stack e-commerce platform built with Next.js, Stripe, and Prisma."
-              tags={["Next.js", "TypeScript", "Prisma", "Stripe"]}
+              title="PLM-UHS Clinic Portal"
+              description="A full-stack healthcare platform built with Laravel, PHP, and TailwindCSS."
+              tags={["Laravel", "PHP", "TailwindCSS", "Alphine.JS", "MySQL", "Figma"]}
               image="/placeholder.svg?height=400&width=600"
               demoUrl="https://example.com"
               repoUrl="https://github.com"
-              longDescription="A comprehensive e-commerce solution that provides businesses with a modern, responsive online store. Features include product management, shopping cart functionality, secure checkout with Stripe, and order management."
+              longDescription="The PLM-UHS Clinic Portal is a web-based application built for the Pamantasan ng Lungsod ng Maynila University Health Services (UHS), providing a centralized platform for students and doctors to manage medical records, upload documents, and schedule clinic appointments. It streamlines clinic operations and enhances healthcare access for the PLM community."
               gallery={[
                 "/placeholder.svg?height=400&width=600",
                 "/placeholder.svg?height=400&width=600",
                 "/placeholder.svg?height=400&width=600",
               ]}
               features={[
-                "Responsive product catalog with filtering and search",
-                "User authentication and account management",
-                "Shopping cart with persistent storage",
-                "Secure payment processing with Stripe",
-                "Order tracking and history",
-                "Admin dashboard for inventory management",
+                "Secure student login and file uploads",
+                "Doctor dashboard with patient file access",
+                "Appointment booking and scheduling system",
+                "Automated email notifications and reminders",
+                "Medical history tracking and document downloads",
+                "Role-based access for students, doctors, and staff",
               ]}
               technologies={[
-                "Next.js",
-                "TypeScript",
-                "Prisma",
-                "PostgreSQL",
-                "Stripe API",
-                "Tailwind CSS",
-                "NextAuth.js",
+                "Laravel",
+                "PHP",
+                "TailwindCSS",
+                "Alpine.JS",
+                "MySQL",
+                "Figma",
               ]}
-              challenges="One of the main challenges was implementing a seamless checkout experience while ensuring security and performance. We solved this by optimizing the Stripe integration and implementing server-side rendering for critical pages."
-              outcome="The platform has successfully processed over 1,000 orders with a 99.8% uptime since launch. Customer feedback has been overwhelmingly positive, particularly regarding the intuitive interface and smooth checkout process."
+              challenges="Coordinating real-time access control across user roles and managing secure file uploads were key challenges. We implemented Laravel policies and custom middleware to ensure data privacy and seamless file handling."
+              outcome="The portal streamlined clinic processes and improved service delivery, reducing manual paperwork and enabling faster medical document access for over 5,000 students and faculty members."
             />
             <ProjectCard
-              title="Task Management App"
-              description="A collaborative task management application with real-time updates."
-              tags={["React", "Firebase", "Tailwind CSS", "Redux"]}
-              image="/placeholder.svg?height=400&width=600"
+              title="Ford's Gym App"
+              description="A mobile fitness companion for workout tracking, class booking, and membership management."
+              tags={["Flutter", "Firebase", "Dart", "UI/UX Design"]}
+              image="/fordsgym-cover.png"
               demoUrl="https://example.com"
-              repoUrl="https://github.com"
-              longDescription="A powerful task management application designed for teams to collaborate efficiently. The app features real-time updates, task assignment, progress tracking, and deadline management."
+              repoUrl="https://github.com/yourusername/fordsgym-app"
+              longDescription="Ford's Gym App is a sleek and intuitive mobile application that empowers users to track workouts, schedule fitness classes, and manage gym memberships—all from their phones. Designed for convenience and accessibility, it simplifies the gym experience for members while supporting gym staff with real-time updates and user-friendly tools."
               gallery={[
-                "/placeholder.svg?height=400&width=600",
-                "/placeholder.svg?height=400&width=600",
-                "/placeholder.svg?height=400&width=600",
+                "/fordsgym-screen1.png",
+                "/fordsgym-screen2.png",
+                "/fordsgym-screen3.png",
               ]}
               features={[
-                "Real-time collaboration with Firebase",
-                "Drag-and-drop task organization",
-                "Task assignment and delegation",
-                "Progress tracking and reporting",
-                "Deadline notifications and reminders",
-                "Team chat and commenting system",
+                "Workout logging with daily history",
+                "Class scheduling and real-time booking",
+                "Trainer profiles and availability viewing",
+                "Membership management with renewal and billing",
+                "Fitness dashboard with goals and progress tracking",
+                "Push notifications for announcements and reminders",
               ]}
               technologies={[
-                "React",
-                "Firebase Realtime Database",
+                "Flutter",
+                "Firebase Firestore",
                 "Firebase Authentication",
-                "Redux",
-                "Tailwind CSS",
-                "React DnD",
+                "Dart",
+                "Figma (UI Design)",
               ]}
-              challenges="Implementing real-time synchronization across multiple users while maintaining performance was challenging. We utilized Firebase's efficient data structure and optimized React rendering to ensure a smooth experience."
-              outcome="The application has been adopted by several teams, resulting in a reported 30% increase in productivity and improved project completion rates."
+              challenges="Designing a user-friendly interface that works across different screen sizes while ensuring smooth data flow and synchronization using Firebase services presented a challenge. Responsive UI design and structured Firestore data models were crucial to the app's success."
+              outcome="The app improved member engagement at Ford's Gym, reducing missed classes by 40% and streamlining staff operations with automated scheduling and notifications."
             />
+
             <ProjectCard
               title="AI Content Generator"
               description="An AI-powered content generation tool using OpenAI's GPT models."
