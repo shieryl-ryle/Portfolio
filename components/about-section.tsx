@@ -74,7 +74,7 @@ export function AboutSection({ data = aboutData }: AboutSectionProps) {
           <div className="relative">
             <div className="overflow-x-auto overflow-y-hidden pb-4 scrollbar-thin" style={{ scrollbarColor: 'var(--accent) transparent' }}>
               <div className="flex gap-3 md:gap-4 animate-marquee min-w-max">
-                {[...data.testimonials, ...data.testimonials].map((testimonial, index) => {
+                {[...data.testimonials, ...data.testimonials, ...data.testimonials, ...data.testimonials].map((testimonial, index) => {
                   const isTruncated = testimonial.text.length > 120
                   const truncatedText = truncateText(testimonial.text)
                   
@@ -104,16 +104,16 @@ export function AboutSection({ data = aboutData }: AboutSectionProps) {
       {/* Testimonial Modal */}
       {selectedTestimonial && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-md overflow-y-auto"
           onClick={closeTestimonial}
         >
           <div
-            className="relative bg-card rounded-xl md:rounded-2xl border border-border max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8"
+            className="relative bg-card rounded-xl md:rounded-2xl border border-border max-w-2xl w-full max-h-[90vh] my-auto overflow-y-auto p-6 md:p-8"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={closeTestimonial}
-              className="absolute top-4 right-4 p-2 rounded-lg hover:bg-secondary transition-colors"
+              className="absolute top-4 right-4 p-2 rounded-lg hover:bg-secondary transition-colors z-10"
               aria-label="Close"
             >
               <X className="w-5 h-5 text-muted-foreground" />

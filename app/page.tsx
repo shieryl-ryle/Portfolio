@@ -42,7 +42,7 @@ export default function Home() {
                   { id: 'about', label: 'about' },
                   { id: 'resume', label: 'resume' },
                   { id: 'portfolio', label: 'portfolio' },
-                  { id: 'certifications', label: 'certifications & awards' },
+                  { id: 'certifications', label: 'certifications' },
                   { id: 'blog', label: 'blog' },
                   { id: 'contact', label: 'contact' },
                 ].map((section) => (
