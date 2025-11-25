@@ -1,4 +1,7 @@
-import { PenTool, Code, Smartphone, Zap } from 'lucide-react'
+'use client'
+
+import { useState } from 'react'
+import { PenTool, Code, Smartphone, Zap, X } from 'lucide-react'
 import { aboutData } from '@/lib/portfolio-data'
 
 const iconMap = {
@@ -13,6 +16,20 @@ interface AboutSectionProps {
 }
 
 export function AboutSection({ data = aboutData }: AboutSectionProps) {
+  const [selectedTestimonial, setSelectedTestimonial] = useState<{ name: string; text: string } | null>(null)
+
+  const truncateText = (text: string, maxLength: number = 120): string => {
+    if (typeof text !== 'string' || text.length <= maxLength) return text
+    return text.slice(0, maxLength) + '...'
+  }
+
+  const openTestimonial = (testimonial: { name: string; text: string }): void => {
+    setSelectedTestimonial(testimonial)
+  }
+
+  const closeTestimonial = (): void => {
+    setSelectedTestimonial(null)
+  }
   return (
     <div className="space-y-8 md:space-y-10">
       {/* About Me */}
@@ -57,14 +74,56 @@ export function AboutSection({ data = aboutData }: AboutSectionProps) {
           <div className="relative">
             <div className="overflow-x-auto overflow-y-hidden pb-4 scrollbar-thin" style={{ scrollbarColor: 'var(--accent) transparent' }}>
               <div className="flex gap-3 md:gap-4 animate-marquee min-w-max">
-                {[...data.testimonials, ...data.testimonials].map((testimonial, index) => (
-                  <div key={index} className="flex-shrink-0 w-72 md:w-80 p-4 md:p-6 bg-secondary rounded-xl md:rounded-2xl border border-border">
-                    <h4 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">{testimonial.name}</h4>
-                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{testimonial.text}</p>
-                  </div>
-                ))}
+                {[...data.testimonials, ...data.testimonials].map((testimonial, index) => {
+                  const isTruncated = testimonial.text.length > 120
+                  const truncatedText = truncateText(testimonial.text)
+                  
+                  return (
+                    <div key={index} className="flex-shrink-0 w-72 md:w-80 p-4 md:p-6 bg-secondary rounded-xl md:rounded-2xl border border-border flex flex-col">
+                      <h4 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">{testimonial.name}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-3 flex-1">
+                        {truncatedText}
+                      </p>
+                      {isTruncated && (
+                        <button
+                          onClick={() => openTestimonial(testimonial)}
+                          className="text-xs md:text-sm text-accent hover:underline font-medium text-left mt-auto"
+                        >
+                          Read More
+                        </button>
+                      )}
+                    </div>
+                  )
+                })}
               </div>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Testimonial Modal */}
+      {selectedTestimonial && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          onClick={closeTestimonial}
+        >
+          <div
+            className="relative bg-card rounded-xl md:rounded-2xl border border-border max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeTestimonial}
+              className="absolute top-4 right-4 p-2 rounded-lg hover:bg-secondary transition-colors"
+              aria-label="Close"
+            >
+              <X className="w-5 h-5 text-muted-foreground" />
+            </button>
+            <h4 className="text-xl md:text-2xl font-bold text-foreground mb-4 pr-8">
+              {selectedTestimonial.name}
+            </h4>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed whitespace-pre-line">
+              {selectedTestimonial.text}
+            </p>
           </div>
         </div>
       )}

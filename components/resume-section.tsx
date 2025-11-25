@@ -35,7 +35,17 @@ export function ResumeSection({ data = resumeData }: ResumeSectionProps) {
               <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent" />
               <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">{item.title}</h4>
               <p className="text-xs md:text-sm text-accent mb-2">{item.period}</p>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              {Array.isArray(item.description) ? (
+                <div className="space-y-2">
+                  {item.description.map((desc: string, idx: number) => (
+                    <p key={idx} className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      {desc}
+                    </p>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              )}
             </div>
           ))}
         </div>
@@ -53,7 +63,17 @@ export function ResumeSection({ data = resumeData }: ResumeSectionProps) {
               <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent" />
               <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">{item.title}</h4>
               <p className="text-xs md:text-sm text-accent mb-2">{item.period}</p>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              {Array.isArray(item.description) ? (
+                <div className="space-y-2">
+                  {item.description.map((desc: string, idx: number) => (
+                    <p key={idx} className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      {desc}
+                    </p>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              )}
             </div>
           ))}
         </div>

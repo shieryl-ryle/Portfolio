@@ -35,27 +35,54 @@ export default function Home() {
           {/* Main Content */}
           <main className="flex-1 bg-card rounded-xl md:rounded-2xl border border-border overflow-hidden">
             {/* Navigation */}
-            <nav className="flex gap-1 sm:gap-2 md:gap-4 p-3 sm:p-4 md:p-6 border-b border-border overflow-x-auto scrollbar-hide">
-              {[
-                { id: 'about', label: 'about' },
-                { id: 'resume', label: 'resume' },
-                { id: 'portfolio', label: 'portfolio' },
-                { id: 'certifications', label: 'certifications & awards' },
-                { id: 'blog', label: 'blog' },
-                { id: 'contact', label: 'contact' },
-              ].map((section) => (
-                <button
-                  key={section.id}
-                  onClick={() => setActiveSection(section.id)}
-                  className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium capitalize transition-colors whitespace-nowrap flex-shrink-0 ${
-                    activeSection === section.id
-                      ? 'text-foreground bg-accent/10'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
-                  }`}
-                >
-                  {section.label}
-                </button>
-              ))}
+            <nav className="p-3 sm:p-4 md:p-6 border-b border-border">
+              {/* Mobile Layout - 2 Row Grid */}
+              <div className="grid grid-cols-3 gap-1 sm:gap-2 md:hidden">
+                {[
+                  { id: 'about', label: 'about' },
+                  { id: 'resume', label: 'resume' },
+                  { id: 'portfolio', label: 'portfolio' },
+                  { id: 'certifications', label: 'certifications & awards' },
+                  { id: 'blog', label: 'blog' },
+                  { id: 'contact', label: 'contact' },
+                ].map((section) => (
+                  <button
+                    key={section.id}
+                    onClick={() => setActiveSection(section.id)}
+                    className={`px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium capitalize transition-colors whitespace-nowrap ${
+                      activeSection === section.id
+                        ? 'text-foreground bg-accent/10'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                    }`}
+                  >
+                    {section.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Desktop Layout - Flex Row */}
+              <div className="hidden md:flex gap-4 overflow-x-auto scrollbar-hide">
+                {[
+                  { id: 'about', label: 'about' },
+                  { id: 'resume', label: 'resume' },
+                  { id: 'portfolio', label: 'portfolio' },
+                  { id: 'certifications', label: 'certifications & awards' },
+                  { id: 'blog', label: 'blog' },
+                  { id: 'contact', label: 'contact' },
+                ].map((section) => (
+                  <button
+                    key={section.id}
+                    onClick={() => setActiveSection(section.id)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium capitalize transition-colors whitespace-nowrap flex-shrink-0 ${
+                      activeSection === section.id
+                        ? 'text-foreground bg-accent/10'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                    }`}
+                  >
+                    {section.label}
+                  </button>
+                ))}
+              </div>
             </nav>
 
             <div className="p-4 sm:p-5 md:p-6 lg:p-8">
