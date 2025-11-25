@@ -94,7 +94,7 @@ export const resumeData = {
   },
   {
   title: 'Software Developer — EasyBus PH',
-  period: 'Present',
+  period: 'May 2025 — Aug 2025',
   description: [
     'Part-time Software Engineer & Developer at EasyBus PH',
     'Contributed to the development of Naga App, implementing user-friendly features and ensuring seamless system',
@@ -102,7 +102,7 @@ export const resumeData = {
   },
   {
   title: 'Marketing and Creatives — FlutterFlow Developer Group',
-  period: 'Nov 2024 — Present',
+  period: 'Nov 2024 — Apr 2025',
   description: [
     'Marketing and Creatives Specialist at FlutterFlow Developer Group',
     'Developing visual content, executing marketing strategies, and promoting community engagement through creative digital campaigns',
