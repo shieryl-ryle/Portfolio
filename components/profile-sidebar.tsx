@@ -1,5 +1,5 @@
 import { Mail, Phone, Calendar, MapPin } from 'lucide-react'
-import { Github, Twitter, Instagram } from 'lucide-react'
+import { Github, Linkedin, Instagram } from 'lucide-react'
 import { profileData, resumeData } from '@/lib/portfolio-data'
 
 interface ProfileSidebarProps {
@@ -96,13 +96,13 @@ export function ProfileSidebar({ data = profileData }: ProfileSidebarProps) {
           <Github className="w-5 h-5" />
         </a>
         <a
-          href={data.social.twitter}
+          href={data.social.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center"
-          aria-label="Twitter"
+          aria-label="LinkedIn"
         >
-          <Twitter className="w-5 h-5" />
+          <Linkedin className="w-5 h-5" />
         </a>
         <a
           href={data.social.instagram}
@@ -118,21 +118,66 @@ export function ProfileSidebar({ data = profileData }: ProfileSidebarProps) {
       {/* Skills Section */}
       <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-border">
         <h3 className="text-base md:text-lg font-bold text-foreground mb-4">Skills</h3>
-        <div className="space-y-3 md:space-y-4">
-          {resumeData.skills.map((skill, index) => (
-            <div key={index}>
-              <div className="flex justify-between mb-1.5">
-                <span className="text-xs font-medium text-foreground">{skill.name}</span>
-                <span className="text-xs text-muted-foreground">{skill.level}%</span>
-              </div>
-              <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-accent rounded-full transition-all duration-1000 ease-out"
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
+        <div className="space-y-4">
+          {/* Core Skills - Highlighted */}
+          <div>
+            <h4 className="text-xs font-semibold text-muted-foreground uppercase mb-2">Core</h4>
+            <div className="flex flex-wrap gap-2">
+              {resumeData.skills.core.map((skill, index) => (
+                <span
+                  key={index}
+                  className="px-2.5 py-1 text-xs font-medium bg-accent/20 text-accent border border-accent/30 rounded-lg"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Databases */}
+          <div>
+            <h4 className="text-xs font-semibold text-muted-foreground uppercase mb-2">Databases</h4>
+            <div className="flex flex-wrap gap-2">
+              {resumeData.skills.databases.map((skill, index) => (
+                <span
+                  key={index}
+                  className="px-2.5 py-1 text-xs font-medium bg-secondary text-foreground border border-border rounded-lg"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* DevOps */}
+          <div>
+            <h4 className="text-xs font-semibold text-muted-foreground uppercase mb-2">DevOps & Tools</h4>
+            <div className="flex flex-wrap gap-2">
+              {resumeData.skills.devops.map((skill, index) => (
+                <span
+                  key={index}
+                  className="px-2.5 py-1 text-xs font-medium bg-secondary text-foreground border border-border rounded-lg"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Web & Backend */}
+          <div>
+            <h4 className="text-xs font-semibold text-muted-foreground uppercase mb-2">Web & Backend</h4>
+            <div className="flex flex-wrap gap-2">
+              {resumeData.skills.webBackend.map((skill, index) => (
+                <span
+                  key={index}
+                  className="px-2.5 py-1 text-xs font-medium bg-secondary text-foreground border border-border rounded-lg"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </aside>

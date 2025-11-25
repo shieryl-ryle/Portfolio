@@ -6,6 +6,7 @@ import { AboutSection } from '@/components/about-section'
 import { ResumeSection } from '@/components/resume-section'
 import { PortfolioSection } from '@/components/portfolio-section'
 import { CertificationsSection } from '@/components/certifications-section'
+import { BlogSection } from '@/components/blog-section'
 import { ContactSection } from '@/components/contact-section-new'
 import { ThemeToggle } from '@/components/theme-toggle'
 import {
@@ -14,6 +15,7 @@ import {
   resumeData,
   portfolioData,
   certificationsData,
+  blogData,
   contactData,
 } from '@/lib/portfolio-data'
 
@@ -39,6 +41,7 @@ export default function Home() {
                 { id: 'resume', label: 'resume' },
                 { id: 'portfolio', label: 'portfolio' },
                 { id: 'certifications', label: 'certifications & awards' },
+                { id: 'blog', label: 'blog' },
                 { id: 'contact', label: 'contact' },
               ].map((section) => (
                 <button
@@ -60,6 +63,7 @@ export default function Home() {
               {activeSection === 'resume' && <ResumeSection data={resumeData} />}
               {activeSection === 'portfolio' && <PortfolioSection data={portfolioData} />}
               {activeSection === 'certifications' && <CertificationsSection data={certificationsData} />}
+              {activeSection === 'blog' && <BlogSection data={blogData} />}
               {activeSection === 'contact' && <ContactSection data={contactData} />}
             </div>
           </main>

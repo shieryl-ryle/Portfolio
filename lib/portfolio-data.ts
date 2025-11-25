@@ -9,6 +9,7 @@ export const profileData = {
   social: {
     github: 'https://github.com/shieryl-ryle',
     linkedin: 'https://www.linkedin.com/in/shieryltendilla/',
+    instagram: 'https://www.instagram.com/@sh.ryle/',
   },
 }
 
@@ -185,18 +186,43 @@ export const resumeData = {
   },
   ],
   
-  skills: [
-  { name: 'SQL', level: 95 },
-  { name: 'Python', level: 90 },
-  { name: 'dbt', level: 88 },
-  { name: 'Data Warehousing', level: 90 },
-  { name: 'ETL / ELT Pipelines', level: 92 },
-  { name: 'Docker', level: 85 },
-  { name: 'Data Modeling', level: 91 },
-  { name: 'Laravel', level: 80 },
-  { name: 'JavaScript', level: 78 },
-  { name: 'REST APIs', level: 85 },
-  ],
+  skills: {
+    core: [
+      'SQL',
+      'Python',
+      'dbt',
+      'dlt',
+      'Data Warehousing',
+      'Data Modeling',
+      'Database Design',
+      'Web Scraping',
+      'API Integration',
+      'PDF Parsing',
+      'ETL/ELT Development',
+      'Data Testing',
+      'Data Validation',
+      'Data Pipelines',
+    ],
+    databases: [
+      'MySQL',
+      'MongoDB',
+      'SQLite',
+    ],
+    devops: [
+      'Docker',
+      'CI/CD',
+      'Git/GitHub',
+      'Jira',
+      'Notion',
+    ],
+    webBackend: [
+      'Laravel',
+      'Flask',
+      'REST APIs',
+      'JavaScript',
+      'Shopify Liquid',
+    ],
+  },
   };
   
   export const portfolioData = {
@@ -288,7 +314,61 @@ export const resumeData = {
   };
 
 export const blogData = {
-  posts: [],
+  posts: [
+    // Add your blog posts here
+    // Example structure:
+    {
+      title: 'Pamilya GCash: GSprout Family Day 2025',
+      url: 'https://www.linkedin.com/posts/shieryltendilla_when-i-first-saw-gforest-on-gcash-years-ago-activity-7398580786158977024-eLPj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEgzAMgBEAVXv3c5TL67eokIHahqCFVzQOM',
+      category: 'Life & Community',
+      date: 'Nov 23, 2025',
+      readTime: '4 min read',
+      excerpt: 'From planting 800 narra trees to seeing how GCash uplifts local communities — this family day event proved how meaningful technology can be when paired with real people and purpose.',
+      image: '/blog/gsprout.png',
+      tags: ['gcash', 'community', 'experience', 'gsprout'],
+    },
+    {
+      title: 'FTW (For the Women) Foundation Graduation: Game Changer Award',
+      url: 'https://www.linkedin.com/in/shieryltendilla/',
+      category: 'Data Engineering',
+      date: 'Nov 15, 2025',
+      readTime: '5 min read',
+      excerpt: 'Graduating as an FTW Scholar and receiving the Game Changer Award — a milestone that reflects growth, resilience, and the journey of becoming a data engineer.',
+      image: '/blog/ftw-graduation.jpg',
+      tags: ['data engineering', 'ftw', 'growth', 'career'],
+    },
+    {
+      title: 'My Journey into Data Engineering with FTW',
+      url: 'https://www.linkedin.com/in/shieryltendilla/',
+      category: 'Data Engineering',
+      date: 'Aug 15, 2025',
+      readTime: '6 min read',
+      excerpt: 'How a scholarship program changed the way I see data, pipelines, and the world behind the dashboards we use every day.',
+      image: '/blog/ftw-journey.png',
+      tags: ['data engineering', 'sql', 'python', 'learning'],
+    },
+    {
+      title: 'Building the MyNaga City Public Service App',
+      url: 'https://www.linkedin.com/posts/shieryltendilla_dev-with-purpose-forever-grateful-activity-7345364512771842048-lmO0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEgzAMgBEAVXv3c5TL67eokIHahqCFVzQOM',
+      category: 'Development',
+      date: 'May 05, 2025',
+      readTime: '2 min read',
+      excerpt: 'Creating a city-wide app used by thousands of residents — from UI and real-time APIs to secure authentication and public deployment on major app stores.',
+      image: '/blog/mynaga-app.jpg',
+      tags: ['mobile development', 'flutter', 'dart', 'public sector'],
+    },
+    {
+      title: 'Ignite PH: Becoming a Student Ambassador',
+      url: 'https://www.linkedin.com/in/shieryltendilla/',
+      category: 'Leadership & Growth',
+      date: 'Oct 2023',
+      readTime: '1 min read',
+      excerpt: 'My journey as a student ambassador for Ignite PH—organizing events, building connections, and helping create opportunities that empower aspiring technologists.',
+      image: '/blog/ignite-ph.jpg',
+      tags: ['leadership', 'community', 'student ambassador', 'career growth'],
+    }
+    
+  ],
 }
 
 export const certificationsData = {

@@ -58,19 +58,7 @@ export function AboutSection({ data = aboutData }: AboutSectionProps) {
             <div className="flex gap-3 md:gap-4 animate-marquee">
               {[...data.testimonials, ...data.testimonials].map((testimonial, index) => (
                 <div key={index} className="flex-shrink-0 w-72 md:w-80 p-4 md:p-6 bg-secondary rounded-xl md:rounded-2xl border border-border">
-                  {testimonial.avatar && (
-                    <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
-                      <img
-                        src={testimonial.avatar || "/placeholder.svg"}
-                        alt={testimonial.name}
-                        className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl object-cover"
-                      />
-                      <h4 className="text-base md:text-lg font-semibold text-foreground">{testimonial.name}</h4>
-                    </div>
-                  )}
-                  {!testimonial.avatar && testimonial.name && (
-                    <h4 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">{testimonial.name}</h4>
-                  )}
+                  <h4 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">{testimonial.name}</h4>
                   <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{testimonial.text}</p>
                 </div>
               ))}
