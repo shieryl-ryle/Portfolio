@@ -50,18 +50,20 @@ export function AboutSection({ data = aboutData }: AboutSectionProps) {
         </div>
       </div>
 
-      {/* Testimonials with Marquee Animation */}
+      {/* Testimonials with Marquee Animation and Scrollable */}
       {data.testimonials && data.testimonials.length > 0 && (
         <div>
           <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6">Testimonials</h3>
-          <div className="relative overflow-hidden">
-            <div className="flex gap-3 md:gap-4 animate-marquee">
-              {[...data.testimonials, ...data.testimonials].map((testimonial, index) => (
-                <div key={index} className="flex-shrink-0 w-72 md:w-80 p-4 md:p-6 bg-secondary rounded-xl md:rounded-2xl border border-border">
-                  <h4 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">{testimonial.name}</h4>
-                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{testimonial.text}</p>
-                </div>
-              ))}
+          <div className="relative">
+            <div className="overflow-x-auto overflow-y-hidden pb-4 scrollbar-thin" style={{ scrollbarColor: 'var(--accent) transparent' }}>
+              <div className="flex gap-3 md:gap-4 animate-marquee min-w-max">
+                {[...data.testimonials, ...data.testimonials].map((testimonial, index) => (
+                  <div key={index} className="flex-shrink-0 w-72 md:w-80 p-4 md:p-6 bg-secondary rounded-xl md:rounded-2xl border border-border">
+                    <h4 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">{testimonial.name}</h4>
+                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{testimonial.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -72,7 +74,7 @@ export function AboutSection({ data = aboutData }: AboutSectionProps) {
         <div>
           <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6">Companies</h3>
           <div className="relative overflow-hidden py-4">
-            <div className="flex gap-4 md:gap-6 animate-marquee-slow">
+            <div className="flex gap-4 md:gap-6 animate-marquee-slow min-w-max">
               {[...data.companies, ...data.companies].map((company, index) => (
                 <div
                   key={index}

@@ -34,16 +34,16 @@ export const aboutData = {
 
   testimonials: [
     {
-      name: 'Micky Mouse',
-      text: 'Shieryl is a great data engineer and software developer. She has a deep understanding of data engineering and software development. She is a great team player and has a great work ethic.',
+      name: 'FTW Operations Head',
+      text: 'Shi has been an exemplary scholar at FTW - she brought not only passion and knowledge to the class but also went out of her way to coach and help her classmates even when it was not asked of her. She contributed so much to the class overall and inspired not just her classmates but even all the instructors and mentors who worked with FTW, earning her the Gamechanger award from the FTW staff and learning team. She is sure to bring not just joy and energy to any team but an infectious, can-do attitude and solid work ethic.',
     },
     {
-      name: 'Donald Duck',
-      text: 'Shieryl is a great data engineer and software developer. She has a deep understanding of data engineering and software development. She is a great team player and has a great work ethic.',
-    },
-    {
-      name: 'Former Tech Dept Lead & Co-Scholar',
+      name: 'GDSC PLM Tech Dept Lead & FTW Co-Scholar',
       text: 'I have been Shi\'s team lead in a mobile app project in GDSC-PLM, and her ideas and skills mainly helped our team\'s work get commendations from my other co-leads, and from the other university we were in collaboration with. I also had Shi as a co-scholar in FTW\'s Data Engineering training program, where she also showed sharp and strong grasp of data skills.'
+    },
+    {
+      name: 'GDSC PLM Mobile Developer Lead',
+      text: 'Shi is proactive and goes beyond of what is asked for her. She is always there to lend a helping hand.',
     },
   ],
 
