@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { SourceProtection } from '@/components/source-protection'
 import './globals.css'
 
 const poppins = Poppins({ 
@@ -39,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} font-sans antialiased`}>
+        <SourceProtection />
         {children}
         <Analytics />
       </body>
