@@ -315,8 +315,6 @@ export const resumeData = {
 
 export const blogData = {
   posts: [
-    // Add your blog posts here
-    // Example structure:
     {
       title: 'Pamilya GCash: GSprout Family Day 2025',
       url: 'https://www.linkedin.com/posts/shieryltendilla_when-i-first-saw-gforest-on-gcash-years-ago-activity-7398580786158977024-eLPj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEgzAMgBEAVXv3c5TL67eokIHahqCFVzQOM',
