@@ -2,7 +2,7 @@ export const profileData = {
   name: 'Shieryl Tendilla',
   title: 'Data Engineer',
   avatar: '/shieryl-avatar.jpg',
-  email: 'tendillas.shieryl@gmail.com',
+  email: 'tendillashieryle@gmail.com',
   phone: '+63 994 645 6197',
   birthday: 'January 28, 2003',
   location: 'Manila, Philippines',
@@ -423,7 +423,7 @@ export const certificationsData = {
 }
 
 export const contactData = {
-  email: 'tendillas.shieryl@gmail.com',
+  email: 'tendillashieryle@gmail.com',
   phone: '+63 994 645 6197',
   location: 'Manila, Philippines',
   mapEmbedUrl:
